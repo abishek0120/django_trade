@@ -53,7 +53,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -161,7 +162,7 @@ USE_TZ = True
 #Secret_Key= "OlVga5gpeVDwmG8UHJ21ZRHAaL1OiStvAJmxRzPjt4COUAPSBxITc7bgF6oLAyUC"
 PRICE_API_URL = "https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
 
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 API_Key = env("API_KEY")
 Secret_Key = env("SECRET_API_KEY")
@@ -169,5 +170,7 @@ Secret_Key = env("SECRET_API_KEY")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-STATIC_URL = 'static/'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
