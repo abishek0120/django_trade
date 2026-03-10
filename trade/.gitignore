@@ -1,0 +1,63 @@
+# Django specific
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Enfolder directory
+enfolder/
+
+# Environment variables
+.env
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Coverage and testing
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# Django
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
